@@ -51,11 +51,11 @@ function updateImage(index) {
   }
 }
 
-// Initial display
+/
 createThumbnails();
 updateImage(currentIndex);
 
-// Button navigation
+
 document.getElementById("left").addEventListener("click", () => {
   updateImage((currentIndex - 1 + images.length) % images.length);
 });
@@ -64,7 +64,6 @@ document.getElementById("right").addEventListener("click", () => {
   updateImage((currentIndex + 1) % images.length);
 });
 
-// Keyboard navigation
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
     updateImage((currentIndex - 1 + images.length) % images.length);
