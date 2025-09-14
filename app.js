@@ -30,6 +30,7 @@ function createThumbnails() {
 
     imageElement.addEventListener("click", function () {
       updateImage(index);
+        createBigImage(image)
     });
 
     thumbnails.appendChild(imageElement);
