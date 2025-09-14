@@ -30,7 +30,6 @@ function createThumbnails() {
 
     imageElement.addEventListener("click", function () {
       updateImage(index);
-       
     });
 
     thumbnails.appendChild(imageElement);
@@ -52,10 +51,8 @@ function updateImage(index) {
   }
 }
 
-/
 createThumbnails();
 updateImage(currentIndex);
-
 
 document.getElementById("left").addEventListener("click", () => {
   updateImage((currentIndex - 1 + images.length) % images.length);
