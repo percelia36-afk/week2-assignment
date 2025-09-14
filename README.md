@@ -9,6 +9,6 @@ https://www.youtube.com/watch?v=ZlFPhTx5zz0
 and read some refernce on Logical oprators on
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment
-because of the time i spendt figuring the buttons i did not get to figure out hou to add a drag scroll
+because of the time i spent figuring the buttons i did not get to figure out hou to add a drag scroll
 
 i also aded some aria lables to the buttons
