@@ -27,28 +27,18 @@ function createThumbnails() {
     const imageElement = document.createElement("img");
     imageElement.src = image.src;
     imageElement.alt = image.alt;
-
     imageElement.addEventListener("click", function () {
       updateImage(index);
     });
-
     thumbnails.appendChild(imageElement);
   });
 }
 
-function createBigImage(imgDetails) {
-  displayContainer.innerHTML = "";
-  const bigImage = document.createElement("img");
-  bigImage.src = imgDetails.src;
-  bigImage.alt = imgDetails.alt;
-  displayContainer.appendChild(bigImage);
-}
-
 function updateImage(index) {
-  if (index >= 0 && index < images.length) {
-    currentIndex = index;
-    createBigImage(images[currentIndex]);
-  }
+  currentIndex = index;
+  const mainImage = document.getElementById("main-image");
+  mainImage.src = images[index].src;
+  mainImage.alt = images[index].alt;
 }
 
 createThumbnails();
@@ -57,11 +47,9 @@ updateImage(currentIndex);
 document.getElementById("left").addEventListener("click", () => {
   updateImage((currentIndex - 1 + images.length) % images.length);
 });
-
 document.getElementById("right").addEventListener("click", () => {
   updateImage((currentIndex + 1) % images.length);
 });
-
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
     updateImage((currentIndex - 1 + images.length) % images.length);
